@@ -1,5 +1,6 @@
-import logo from '@/assets/images/flowise_white.svg'
-import logoDark from '@/assets/images/flowise_dark.svg'
+// HACK: pab
+import logo from '@/assets/images/mn-logo_white.svg'
+import logoDark from '@/assets/images/mn-logo_dark.svg'
 
 import { useSelector } from 'react-redux'
 
