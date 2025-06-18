@@ -147,13 +147,13 @@ Click the **“Fork”** button on the original GitHub repository to create a co
 
 #### 2. Clone Your Fork Locally
 ```bash
-git clone https://github.com/YOUR_USERNAME/your-forked-repo.git
-cd your-forked-repo
+git clone https://github.com/mobiquity-networks/Flowise.git
+cd Flowise
 ```
 
 #### 3. Add the Original Repository as a Remote
 ```bash
-git remote add upstream https://github.com/ORIGINAL_OWNER/original-repo.git
+git remote add upstream https://github.com/FlowiseAI/Flowise.git
 ```
 
 > This sets up:
