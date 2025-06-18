@@ -136,6 +136,68 @@ Flowise has 3 different modules in a single mono repository.
 
 Flowise support different environment variables to configure your instance. You can specify the following variables in the `.env` file inside `packages/server` folder. Read [more](https://github.com/FlowiseAI/Flowise/blob/main/CONTRIBUTING.md#-env-variables)
 
+## 🛠️ Maintaining a Fork in Sync with the Original Repository
+
+This project is a fork of an open source repository. The following workflow allows you to make your own changes while still keeping up with updates from the original repository.
+
+### 📦 Step-by-Step Setup
+
+#### 1. Fork the Original Repository
+Click the **“Fork”** button on the original GitHub repository to create a copy under your own GitHub account.
+
+#### 2. Clone Your Fork Locally
+```bash
+git clone https://github.com/YOUR_USERNAME/your-forked-repo.git
+cd your-forked-repo
+```
+
+#### 3. Add the Original Repository as a Remote
+```bash
+git remote add upstream https://github.com/ORIGINAL_OWNER/original-repo.git
+```
+
+> This sets up:
+> - `origin` → your fork
+> - `upstream` → the original repo
+
+#### 4. Make and Commit Your Own Changes
+```bash
+# Make your edits
+git add .
+git commit -m "Your custom changes"
+git push origin main
+```
+
+#### 5. Sync Your Fork with the Original
+To stay updated with upstream changes:
+```bash
+git fetch upstream
+git checkout main
+git merge upstream/main
+git push origin main
+```
+
+### 🔄 Optional: Rebase Instead of Merge
+For a cleaner history:
+```bash
+git fetch upstream
+git checkout main
+git rebase upstream/main
+```
+
+> ⚠️ Be careful with `rebase` if you're working on a team — it rewrites history.
+
+### 📌 Summary
+
+```text
+original repo (upstream) ───► your fork (origin)
+                                ▲         │
+                                │         ▼
+                          local copy ←── your edits
+```
+
+With this setup, you can freely build on the code while keeping your fork up-to-date with the latest from the original repository.
+
 ## 📖 Documentation
 
 [Flowise Docs](https://docs.flowiseai.com/)
